@@ -14,6 +14,8 @@ header {
     color: #fff;
     padding: 4em 2em;
     border-bottom: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header h1 {
@@ -61,6 +63,7 @@ main {
     margin-top: 0;
     font-size: 2em;
     color: #333;
+    font-weight: 600;
 }
 
 .link-card a {
@@ -68,6 +71,7 @@ main {
     text-decoration: none;
     font-size: 1.25em;
     font-weight: 600;
+    transition: color 0.3s;
 }
 
 .link-card a:hover {
@@ -77,12 +81,17 @@ main {
 
 /* Стиль подвала */
 footer {
-    background: #ff6f61;
-    color: #fff;
-    padding: 1.5em 0;
+    background: #fff;
+    color: #333;
+    padding: 1.5em 2em;
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 5px solid #fff;
+    border-top: 5px solid #ff6f61;
     font-size: 1.2em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
