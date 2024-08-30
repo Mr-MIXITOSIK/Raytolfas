@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Google Sign-In Test</title>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
         function handleCredentialResponse(response) {
             console.log('Credential Response:', response);
             if (response.credential) {
                 alert('Вы успешно вошли!');
-                document.getElementById('google-signin-button').style.display = 'none';
-                document.getElementById('profile-button').style.display = 'inline-block';
             } else {
-                console.error('Ошибка входа');
+                alert('Ошибка входа');
             }
         }
 
@@ -33,28 +30,6 @@
     </script>
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать на наш сайт</h1>
-        <nav>
-            <ul>
-                <li><a href="https://www.tiktok.com/@hd_raytolfas.studio" target="_blank">Tiktok</a></li>
-                <li><a href="https://www.youtube.com/@MIXITOSIK_official" target="_blank">YouTube</a></li>
-                <li><a href="https://open.spotify.com/artist/6KY6sYxJIcEuYiWADKvHVd?si=OKZJt-RASH-h_Xlr4sczdg" target="_blank">Spotify</a></li>
-                <li><a href="https://www.raytolfas.pp.ua" target="_blank">Основной сайт</a></li>
-                <li id="profile-button" style="display: none;"><a href="/profile">Профиль</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="container">
-            <!-- Кнопка регистрации через Google -->
-            <div id="google-signin-button"></div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Ваш сайт. Все права защищены.</p>
-    </footer>
+    <div id="google-signin-button"></div>
 </body>
 </html>
