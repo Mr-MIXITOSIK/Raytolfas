@@ -9,10 +9,11 @@
     <script>
         function handleCredentialResponse(response) {
             const { credential } = response;
-            // Вы можете отправить токен на сервер или сохранить в localStorage
             console.log('Google ID Token:', credential);
-            alert('Вы успешно вошли!'); // Сообщение о успешном входе
-
+            
+            // Для проверки работоспособности, временно используем alert
+            alert('Вы успешно вошли!');
+            
             // Показываем кнопку профиля и скрываем кнопку Google Sign-In
             document.getElementById('google-signin-button').style.display = 'none';
             document.getElementById('profile-button').style.display = 'inline-block';
