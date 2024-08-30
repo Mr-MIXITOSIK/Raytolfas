@@ -1,35 +1,33 @@
+/* Основной стиль страницы */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
     color: #333;
     text-align: center;
 }
 
+/* Стиль заголовка */
 header {
-    background-color: #1e2a38;
-    color: #e3f2fd;
-    padding: 3em 0;
-    border-bottom: 8px solid #4fc3f7;
-}
-
-.header-content {
-    max-width: 900px;
-    margin: 0 auto;
+    background: linear-gradient(135deg, #ff6f61, #de6161);
+    color: #fff;
+    padding: 4em 2em;
+    border-bottom: 5px solid #fff;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 3.5em;
+    font-weight: 700;
 }
 
 header p {
     font-size: 1.5em;
-    margin: 0.5em 0 0;
+    margin-top: 0.5em;
 }
 
+/* Стиль основного контента */
 main {
     padding: 3em 1em;
 }
@@ -39,33 +37,34 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1.5em;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
+/* Стиль карточек ссылок */
 .link-card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     padding: 2em;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .link-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .link-card h2 {
     margin-top: 0;
-    font-size: 1.75em;
-    color: #1e2a38;
+    font-size: 2em;
+    color: #333;
 }
 
 .link-card a {
-    color: #1e88e5;
+    color: #ff6f61;
     text-decoration: none;
     font-size: 1.25em;
     font-weight: 600;
@@ -73,16 +72,17 @@ main {
 
 .link-card a:hover {
     text-decoration: underline;
-    color: #0d47a1;
+    color: #de6161;
 }
 
+/* Стиль подвала */
 footer {
-    background-color: #1e2a38;
-    color: #e3f2fd;
+    background: #ff6f61;
+    color: #fff;
     padding: 1.5em 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 8px solid #4fc3f7;
+    border-top: 5px solid #fff;
     font-size: 1.2em;
 }
