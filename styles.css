@@ -56,42 +56,4 @@ main {
 
 .link-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-.link-card h2 {
-    margin-top: 0;
-    font-size: 2em;
-    color: #333;
-    font-weight: 600;
-}
-
-.link-card a {
-    color: #ff6f61;
-    text-decoration: none;
-    font-size: 1.25em;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.link-card a:hover {
-    text-decoration: underline;
-    color: #de6161;
-}
-
-/* Стиль подвала */
-footer {
-    background: #fff;
-    color: #333;
-    padding: 1.5em 2em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-top: 5px solid #ff6f61;
-    font-size: 1.2em;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    box-shadow: 0 
