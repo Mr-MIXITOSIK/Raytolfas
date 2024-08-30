@@ -17,21 +17,19 @@ document.getElementById('link-form').addEventListener('submit', function(e) {
         shortLinkElement.textContent = shortUrl;
         document.getElementById('result').style.display = 'block';
 
-        // Копирование короткой ссылки в буфер обмена
-        copyToClipboard(shortUrl);
+        // Отображаем сообщение рядом с кнопкой
+        showCopyMessage();
     })
     .catch(error => console.error('Ошибка:', error));
 });
 
-// Функция копирования текста в буфер обмена
-function copyToClipboard(text) {
-    // Создаем временный элемент для копирования текста
-    const tempInput = document.createElement('input');
-    document.body.appendChild(tempInput);
-    tempInput.value = text;
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
+// Функция для отображения сообщения
+function showCopyMessage() {
+    const messageElement = document.getElementById('copy-message');
+    messageElement.style.display = 'block';
 
-    alert('Ссылка скопирована в буфер обмена: ' + text);
+    // Скрываем сообщение через 3 секунды
+    setTimeout(() => {
+        messageElement.style.display = 'none';
+    }, 3000);
 }
