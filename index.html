@@ -3,126 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькуляторы</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Сокращатель ссылок</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
 </head>
 <body>
     <header>
-        <h1>Калькуляторы</h1>
-        <p>Инструменты для расчетов и генерации</p>
+        <h1>Добро пожаловать в Сокращатель ссылок!</h1>
     </header>
-    
+
     <main>
-        <section id="calculator">
-            <h2>Калькуляторы</h2>
+        <form id="link-form">
+            <label for="url">Введите URL:</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com" required>
+            <button type="submit">Сократить</button>
+        </form>
 
-            <!-- Время -->
-            <div class="calculator">
-                <h3>Калькулятор времени</h3>
-                <label for="time1">Время 1:</label>
-                <input type="time" id="time1">
-                <label for="time2">Время 2:</label>
-                <input type="time" id="time2">
-                <button id="calculate-time">Посчитать разницу</button>
-                <p id="time-difference"></p>
-            </div>
-            
-            <!-- Даты -->
-            <div class="calculator">
-                <h3>Калькулятор дат</h3>
-                <label for="date1">Дата 1:</label>
-                <input type="date" id="date1">
-                <label for="date2">Дата 2:</label>
-                <input type="date" id="date2">
-                <button id="calculate-date">Посчитать разницу</button>
-                <p id="date-difference"></p>
-            </div>
-
-            <!-- Пароли -->
-            <div class="calculator">
-                <h3>Генератор паролей</h3>
-                <label for="password-length">Длина пароля:</label>
-                <input type="number" id="password-length" value="12">
-                <button id="generate-password">Сгенерировать пароль</button>
-                <p id="generated-password"></p>
-            </div>
-
-            <!-- ИМТ -->
-            <div class="calculator">
-                <h3>Калькулятор ИМТ</h3>
-                <label for="weight">Вес (кг):</label>
-                <input type="number" id="weight" step="0.1">
-                <label for="height">Рост (м):</label>
-                <input type="number" id="height" step="0.01">
-                <button id="calculate-bmi">Посчитать ИМТ</button>
-                <p id="bmi-result"></p>
-            </div>
-
-            <!-- Налог -->
-            <div class="calculator">
-                <h3>Калькулятор налога</h3>
-                <label for="income">Доход (руб):</label>
-                <input type="number" id="income" step="0.01">
-                <label for="tax-rate">Ставка налога (%):</label>
-                <input type="number" id="tax-rate" step="0.01">
-                <button id="calculate-tax">Посчитать налог</button>
-                <p id="tax-result"></p>
-            </div>
-
-            <!-- Проценты -->
-            <div class="calculator">
-                <h3>Калькулятор процентов</h3>
-                <label for="amount">Сумма (руб):</label>
-                <input type="number" id="amount" step="0.01">
-                <label for="percent">Процент (%):</label>
-                <input type="number" id="percent" step="0.01">
-                <button id="calculate-percent">Посчитать процент</button>
-                <p id="percent-result"></p>
-            </div>
-
-            <!-- Конверсия единиц -->
-            <div class="calculator">
-                <h3>Калькулятор конверсии единиц</h3>
-                <label for="value">Число:</label>
-                <input type="number" id="value" step="0.01">
-                <label for="unit-from">Из:</label>
-                <select id="unit-from">
-                    <option value="meters">Метры</option>
-                    <option value="kilometers">Километры</option>
-                    <option value="miles">Мили</option>
-                </select>
-                <label for="unit-to">В:</label>
-                <select id="unit-to">
-                    <option value="meters">Метры</option>
-                    <option value="kilometers">Километры</option>
-                    <option value="miles">Мили</option>
-                </select>
-                <button id="convert-units">Конвертировать</button>
-                <p id="conversion-result"></p>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Контакты</h2>
-            <form id="contact-form">
-                <label for="contact-name">Имя:</label>
-                <input type="text" id="contact-name" name="contact-name">
-                
-                <label for="contact-email">Email:</label>
-                <input type="email" id="contact-email" name="contact-email">
-                
-                <label for="contact-message">Сообщение:</label>
-                <textarea id="contact-message" name="contact-message"></textarea>
-                
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
+        <div id="result" style="display:none;">
+            <h3>Ваша короткая ссылка:</h3>
+            <a href="#" id="short-link" target="_blank"></a>
+        </div>
     </main>
-    
+
     <footer>
-        <p>&copy; 2024 Калькуляторы. Все права защищены.</p>
+        <p>&copy; 2024 Сокращатель ссылок</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="script.js"></script> <!-- Подключение JavaScript -->
 </body>
 </html>
