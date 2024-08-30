@@ -1,6 +1,7 @@
+/* Основные стили */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,52 +9,68 @@ body {
     min-height: 100vh;
 }
 
+/* Стили заголовка */
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #4CAF50, #81C784);
     color: white;
-    padding: 10px;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Основной контейнер */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 20px;
 }
 
+/* Контейнер для содержимого */
 .container {
     text-align: center;
+    max-width: 600px;
+    width: 100%;
 }
 
+/* Стили ссылок */
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 ul li a {
     text-decoration: none;
     color: #4CAF50;
     font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 ul li a:hover {
-    text-decoration: underline;
+    color: #388E3C;
+    transform: scale(1.05);
 }
 
+/* Кнопка Google Sign-In */
 #google-signin-button {
     margin-top: 20px;
 }
 
+/* Стили футера */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
