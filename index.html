@@ -9,11 +9,13 @@
     <script>
         function handleCredentialResponse(response) {
             const { credential } = response;
-            // Отправляем токен на сервер, если требуется
+            // Вы можете отправить токен на сервер или сохранить в localStorage
             console.log('Google ID Token:', credential);
             alert('Вы успешно вошли!'); // Сообщение о успешном входе
-            // Перенаправление пользователя на другую страницу (например, профиля)
-            // window.location.href = '/profile';
+
+            // Показываем кнопку профиля и скрываем кнопку Google Sign-In
+            document.getElementById('google-signin-button').style.display = 'none';
+            document.getElementById('profile-button').style.display = 'inline-block';
         }
 
         function initGoogleSignin() {
@@ -33,17 +35,19 @@
 <body>
     <header>
         <h1>Добро пожаловать на наш сайт</h1>
-    </header>
-
-    <main>
-        <div class="container">
-            <!-- Ваши ссылки -->
+        <nav>
             <ul>
                 <li><a href="https://www.tiktok.com/@hd_raytolfas.studio" target="_blank">Tiktok</a></li>
                 <li><a href="https://www.youtube.com/@MIXITOSIK_official" target="_blank">YouTube</a></li>
                 <li><a href="https://open.spotify.com/artist/6KY6sYxJIcEuYiWADKvHVd?si=OKZJt-RASH-h_Xlr4sczdg" target="_blank">Spotify</a></li>
                 <li><a href="https://www.raytolfas.pp.ua" target="_blank">Основной сайт</a></li>
+                <li id="profile-button" style="display: none;"><a href="/profile">Профиль</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
             <!-- Кнопка регистрации через Google -->
             <div id="google-signin-button"></div>
         </div>
