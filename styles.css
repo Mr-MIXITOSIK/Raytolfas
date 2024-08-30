@@ -1,59 +1,59 @@
-/* Основной стиль страницы */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
     text-align: center;
 }
 
-/* Стиль заголовка */
-header {
-    background: linear-gradient(135deg, #ff6f61, #de6161);
-    color: #fff;
-    padding: 4em 2em;
-    border-bottom: 5px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 3.5em;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.5em;
-    margin-top: 0.5em;
-}
-
-/* Стиль основного контента */
 main {
-    padding: 3em 1em;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5em;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: center;
 }
 
-/* Стиль карточек ссылок */
-.link-card {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    padding: 2em;
-    width: 100%;
-    max-width: 500px;
-    transition: transform 0.3s, box-shadow 0.3s;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.link-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+#google-signin-button {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
