@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои Ссылки</title>
+    <title>Главная страница</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleCredentialResponse(response) {
+            const { credential } = response;
+            // Вы можете отправить токен на сервер или сохранить в localStorage
+            console.log('Google ID Token:', credential);
+            alert('Вы успешно вошли!'); // Сообщение о успешном входе
+            // Перенаправление пользователя на другую страницу (например, профиля)
+            // window.location.href = '/profile';
+        }
+
+        function initGoogleSignin() {
+            window.google.accounts.id.initialize({
+                client_id: '117576157898-r02q6fvfi2s82s45cjdei5il59dni25i.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            });
+            window.google.accounts.id.renderButton(
+                document.getElementById('google-signin-button'),
+                { theme: 'outline', size: 'large' }
+            );
+        }
+
+        document.addEventListener('DOMContentLoaded', initGoogleSignin);
+    </script>
 </head>
 <body>
     <header>
-        <h1>Мои Ссылки</h1>
-        <p>Следите за моими проектами</p>
+        <h1>Добро пожаловать на наш сайт</h1>
     </header>
 
     <main>
         <div class="container">
-            <div class="link-card">
-                <h2>TikTok</h2>
-                <a href="https://www.tiktok.com/@hd_raytolfas.studio" target="_blank">@hd_raytolfas.studio</a>
-            </div>
-            <div class="link-card">
-                <h2>YouTube</h2>
-                <a href="https://www.youtube.com/@MIXITOSIK_official" target="_blank">@MIXITOSIK_official</a>
-            </div>
-            <div class="link-card">
-                <h2>Spotify</h2>
-                <a href="https://open.spotify.com/artist/6KY6sYxJIcEuYiWADKvHVd?si=OKZJt-RASH-h_Xlr4sczdg" target="_blank">@MIXITOSIK</a>
-            </div>
-            <div class="link-card">
-                <h2>Основной сайт</h2>
-                <a href="http://www.raytolfas.pp.ua" target="_blank">www.raytolfas.pp.ua</a>
-            </div>
+            <!-- Ваши ссылки -->
+            <ul>
+                <li><a href="https://www.tiktok.com/@hd_raytolfas.studio">Tiktok</a></li>
+                <li><a href="https://www.youtube.com/@MIXITOSIK_official">YouTube</a></li>
+                <li><a href="https://open.spotify.com/artist/6KY6sYxJIcEuYiWADKvHVd?si=OKZJt-RASH-h_Xlr4sczdg">Spotify</a></li>
+                <li><a href="https://www.raytolfas.pp.ua">Основной сайт</a></li>
+            </ul>
+            <!-- Кнопка регистрации через Google -->
+            <div id="google-signin-button"></div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Ваш сайт. Все права защищены.</p>
+    </footer>
 </body>
 </html>
