@@ -9,20 +9,12 @@
     <script>
         function handleCredentialResponse(response) {
             console.log('Credential Response:', response);
-
-            if (response && response.credential) {
-                // Обрабатываем полученный токен
-                const credential = response.credential;
-                console.log('Google ID Token:', credential);
-                
-                // Для проверки работоспособности, временно используем alert
+            if (response.credential) {
                 alert('Вы успешно вошли!');
-                
-                // Показываем кнопку профиля и скрываем кнопку Google Sign-In
                 document.getElementById('google-signin-button').style.display = 'none';
                 document.getElementById('profile-button').style.display = 'inline-block';
             } else {
-                console.error('No credential received');
+                alert('Ошибка входа');
             }
         }
 
