@@ -9,13 +9,38 @@ body {
     min-height: 100vh;
 }
 
-/* Стили заголовка */
+/* Стили заголовка и меню */
 header {
     background: linear-gradient(to right, #4CAF50, #81C784);
     color: white;
     padding: 20px 0;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dbe5d9;
+    transform: scale(1.1);
 }
 
 /* Основной контейнер */
@@ -34,31 +59,7 @@ main {
     width: 100%;
 }
 
-/* Стили ссылок */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul li {
-    margin: 15px 0;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-ul li a:hover {
-    color: #388E3C;
-    transform: scale(1.05);
-}
-
-/* Кнопка Google Sign-In */
+/* Стили кнопки Google Sign-In */
 #google-signin-button {
     margin-top: 20px;
 }
