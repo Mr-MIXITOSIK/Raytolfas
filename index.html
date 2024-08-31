@@ -84,11 +84,26 @@
             height: 100vh; /* Создание пространства до портфолио */
         }
 
+        .portfolio-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .portfolio-section h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: fadeInDown 1s ease-out;
+        }
+
         .portfolio {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
-            padding: 50px;
+            justify-content: center;
+            padding: 0 20px;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
@@ -124,11 +139,14 @@
     <div class="spacer"></div> <!-- Добавлено пространство перед портфолио -->
 
     <!-- Портфолио -->
-    <section class="portfolio" id="portfolio">
-        <a href="https://i.postimg.cc/VN5GxMrZ/1.png" target="_blank"><img src="https://i.postimg.cc/VN5GxMrZ/1.png" alt="Project 1"></a>
-        <a href="https://i.postimg.cc/GtnXT5M6/3.png" target="_blank"><img src="https://i.postimg.cc/GtnXT5M6/3.png" alt="Project 2"></a>
-        <a href="https://i.postimg.cc/d1yW1Y98/fdyy-1.png" target="_blank"><img src="https://i.postimg.cc/d1yW1Y98/fdyy-1.png" alt="Project 3"></a>
-        <a href="https://i.postimg.cc/1zTCstDm/4.png" target="_blank"><img src="https://i.postimg.cc/1zTCstDm/4.png" alt="Project 4"></a>
+    <section class="portfolio-section">
+        <h2>Портфолио</h2>
+        <div class="portfolio" id="portfolio">
+            <a href="https://i.postimg.cc/VN5GxMrZ/1.png" target="_blank"><img src="https://i.postimg.cc/VN5GxMrZ/1.png" alt="Project 1"></a>
+            <a href="https://i.postimg.cc/GtnXT5M6/3.png" target="_blank"><img src="https://i.postimg.cc/GtnXT5M6/3.png" alt="Project 2"></a>
+            <a href="https://i.postimg.cc/d1yW1Y98/fdyy-1.png" target="_blank"><img src="https://i.postimg.cc/d1yW1Y98/fdyy-1.png" alt="Project 3"></a>
+            <a href="https://i.postimg.cc/1zTCstDm/4.png" target="_blank"><img src="https://i.postimg.cc/1zTCstDm/4.png" alt="Project 4"></a>
+        </div>
     </section>
 
     <script>
@@ -139,7 +157,7 @@
             const hue = Math.min(240, 280 * scrollFraction);
             document.body.style.background = `linear-gradient(135deg, hsl(220, 20%, ${25 + 10 * scrollFraction}%), hsl(240, 20%, ${30 + 20 * scrollFraction}%))`;
 
-            const portfolioSection = document.getElementById('portfolio');
+            const portfolioSection = document.querySelector('.portfolio');
             if (scrollTop + window.innerHeight > portfolioSection.offsetTop) {
                 portfolioSection.style.opacity = 1;
             }
