@@ -17,6 +17,45 @@
             transition: background 0.3s ease;
         }
 
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .login-button {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid #ffffff;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-button:hover {
+            background-color: #ffffff;
+            color: #1e1e2f;
+            box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+
         header {
             margin-top: 60px; /* Отступ для меню */
             text-align: center;
@@ -40,50 +79,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline-block;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 12px 25px;
-            border-radius: 30px;
-            border: 1px solid #ffffff;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        nav ul li a:hover {
-            background-color: #ffffff;
-            color: #1e1e2f;
-            box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4);
-            transform: translateY(-3px);
         }
 
         .spacer {
@@ -130,12 +125,8 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="https://www.tiktok.com/@hd_raytolfas.studio" target="_blank">Tiktok</a></li>
-            <li><a href="https://www.youtube.com/@MIXITOSIK_official" target="_blank">YouTube</a></li>
-            <li><a href="https://open.spotify.com/artist/6KY6sYxJIcEuYiWADKvHVd?si=OKZJt-RASH-h_Xlr4sczdg" target="_blank">Spotify</a></li>
-            <li><a href="https://www.raytolfas.pp.ua" target="_blank">Основной сайт</a></li>
-        </ul>
+        <div class="logo">Raytolfas</div>
+        <a href="login.html" class="login-button">Войти</a>
     </nav>
 
     <header>
