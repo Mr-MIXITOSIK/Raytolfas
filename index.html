@@ -136,4 +136,14 @@
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollFraction = scrollTop / scrollHeight;
-            const hue = Math.min(240, 280 * scr
+            const hue = Math.min(240, 280 * scrollFraction);
+            document.body.style.background = `linear-gradient(135deg, hsl(220, 20%, ${25 + 10 * scrollFraction}%), hsl(240, 20%, ${30 + 20 * scrollFraction}%))`;
+
+            const portfolioSection = document.getElementById('portfolio');
+            if (scrollTop + window.innerHeight > portfolioSection.offsetTop) {
+                portfolioSection.style.opacity = 1;
+            }
+        });
+    </script>
+</body>
+</html>
