@@ -12,7 +12,7 @@
             color: #ffffff;
             margin: 0;
             padding: 0;
-            min-height: 150vh;
+            min-height: 200vh;
             overflow-x: hidden;
             transition: background 0.3s ease;
         }
@@ -44,7 +44,7 @@
 
         nav {
             display: flex;
-            justify-content: center; /* Центрируем содержимое контейнера */
+            justify-content: center;
             align-items: center;
             margin-top: 30px;
         }
@@ -54,11 +54,11 @@
             padding: 0;
             display: flex;
             gap: 20px;
-            justify-content: center; /* Центрируем элементы внутри списка */
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline-block; /* Устанавливаем блочный уровень */
+            display: inline-block;
         }
 
         nav ul li a {
@@ -79,6 +79,28 @@
             box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4);
             transform: translateY(-3px);
         }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 50px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .portfolio img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -95,6 +117,15 @@
         </ul>
     </nav>
 
+    <!-- Портфолио -->
+    <section class="portfolio" id="portfolio">
+        <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Project 1"></a>
+        <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Project 2"></a>
+        <a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt="Project 3"></a>
+        <a href="photo4.jpg" target="_blank"><img src="photo4.jpg" alt="Project 4"></a>
+        <!-- Добавьте больше фото по необходимости -->
+    </section>
+
     <script>
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -102,6 +133,11 @@
             const scrollFraction = scrollTop / scrollHeight;
             const hue = Math.min(240, 280 * scrollFraction);
             document.body.style.background = `linear-gradient(135deg, hsl(220, 20%, ${25 + 10 * scrollFraction}%), hsl(240, 20%, ${30 + 20 * scrollFraction}%))`;
+
+            const portfolioSection = document.getElementById('portfolio');
+            if (scrollTop + window.innerHeight > portfolioSection.offsetTop) {
+                portfolioSection.style.opacity = 1;
+            }
         });
     </script>
 </body>
