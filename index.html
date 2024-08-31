@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background: #f4f4f4;
+            overflow-x: hidden;
         }
 
         .navbar {
@@ -70,21 +71,41 @@
             z-index: 999;
         }
 
+        .portfolio .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
         .portfolio img {
             max-width: 100px;
             margin: 0 10px;
             border-radius: 8px;
         }
 
-        .portfolio .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
+        /* Градиент для фона */
+        .gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #333, #1e1e2f);
+            transition: background 0.5s;
+            z-index: -1;
+        }
+
+        /* Плавное изменение градиента */
+        .scrolled .gradient-bg {
+            background: linear-gradient(to bottom, #333, #ff6f00);
         }
     </style>
 </head>
 <body>
+    <div class="gradient-bg"></div>
+
     <div class="navbar">
         <h1>Мой Сайт</h1>
         <a href="login.html">Войти</a>
@@ -107,10 +128,18 @@
     <script>
         window.addEventListener('scroll', () => {
             const portfolio = document.querySelector('.portfolio');
+            const gradientBg = document.querySelector('.gradient-bg');
             if (window.scrollY + window.innerHeight >= document.body.scrollHeight - 100) {
                 portfolio.style.display = 'block';
             } else {
                 portfolio.style.display = 'none';
+            }
+
+            // Изменение градиента при прокрутке
+            if (window.scrollY > 100) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
             }
         });
     </script>
