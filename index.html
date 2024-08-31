@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #4e4e90);
+            background: linear-gradient(135deg, #1e1e2f, #2a2a3b);
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -94,8 +94,8 @@
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollFraction = scrollTop / scrollHeight;
-            const hue = Math.min(240, 360 * scrollFraction);
-            document.body.style.background = `linear-gradient(135deg, hsl(${hue}, 50%, 25%), hsl(${hue + 60}, 50%, 50%))`;
+            const hue = Math.min(240, 280 * scrollFraction); // Ограничиваем изменение цвета
+            document.body.style.background = `linear-gradient(135deg, hsl(220, 20%, ${25 + 10 * scrollFraction}%), hsl(240, 20%, ${30 + 20 * scrollFraction}%))`;
         });
     </script>
 </body>
