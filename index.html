@@ -80,6 +80,10 @@
             transform: translateY(-3px);
         }
 
+        .spacer {
+            height: 100vh; /* Создание пространства до портфолио */
+        }
+
         .portfolio {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -117,25 +121,6 @@
         </ul>
     </nav>
 
-    <!-- Портфолио -->
-    <section class="portfolio" id="portfolio">
-        <a href="https://i.postimg.cc/VN5GxMrZ/1.png" target="_blank"><img src="https://i.postimg.cc/VN5GxMrZ/1.png" alt="Проект"></a>
-        <!-- Добавьте больше фото по необходимости -->
-    </section>
+    <div class="spacer"></div> <!-- Добавлено пространство перед портфолио -->
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollFraction = scrollTop / scrollHeight;
-            const hue = Math.min(240, 280 * scrollFraction);
-            document.body.style.background = `linear-gradient(135deg, hsl(220, 20%, ${25 + 10 * scrollFraction}%), hsl(240, 20%, ${30 + 20 * scrollFraction}%))`;
-
-            const portfolioSection = document.getElementById('portfolio');
-            if (scrollTop + window.innerHeight > portfolioSection.offsetTop) {
-                portfolioSection.style.opacity = 1;
-            }
-        });
-    </script>
-</body>
-</html>
+    <!-- Портфо
