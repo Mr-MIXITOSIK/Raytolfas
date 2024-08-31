@@ -123,4 +123,17 @@
 
     <div class="spacer"></div> <!-- Добавлено пространство перед портфолио -->
 
-    <!-- Портфо
+    <!-- Портфолио -->
+    <section class="portfolio" id="portfolio">
+        <a href="https://i.postimg.cc/VN5GxMrZ/1.png" target="_blank"><img src="https://i.postimg.cc/VN5GxMrZ/1.png" alt="Project 1"></a>
+        <a href="https://i.postimg.cc/GtnXT5M6/3.png" target="_blank"><img src="https://i.postimg.cc/GtnXT5M6/3.png" alt="Project 2"></a>
+        <a href="https://i.postimg.cc/d1yW1Y98/fdyy-1.png" target="_blank"><img src="https://i.postimg.cc/d1yW1Y98/fdyy-1.png" alt="Project 3"></a>
+        <a href="https://i.postimg.cc/1zTCstDm/4.png" target="_blank"><img src="https://i.postimg.cc/1zTCstDm/4.png" alt="Project 4"></a>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollFraction = scrollTop / scrollHeight;
+            const hue = Math.min(240, 280 * scr
